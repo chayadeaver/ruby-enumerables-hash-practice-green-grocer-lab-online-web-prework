@@ -56,4 +56,3 @@ end
 
 consolidate_cart(cart_new)
 apply_coupons(new_cart, coupons)
-

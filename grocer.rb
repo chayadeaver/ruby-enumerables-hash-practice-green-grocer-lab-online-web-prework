@@ -16,6 +16,11 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon| 
     coupon.each do |attribute, value| 
       name = coupon[:item] 
+      new_coupon_hash = {
+      :price => coupon_hash[:cost],
+      :clearance => "true",
+      :count => coupon_hash[:num]
+    }
     
       if cart[name] && cart[name][:count] >= coupon[:num] 
         if cart["#{name} W/COUPON"] 

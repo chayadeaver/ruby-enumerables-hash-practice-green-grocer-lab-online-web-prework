@@ -1,15 +1,15 @@
 require 'pry'
 
 def consolidate_cart(cart)
-  consolidated_cart = {}
+  cart_new = {}
   cart.each do |item_array| 
     # binding.pry
     item_array.each do |item, attribute_hash|
-      consolidated_cart[item] ||= attribute_hash
-      consolidated_cart[item][:count] ? consolidated_cart[item][:count] +=1 : consolidated_cart[item][:count] = 1
+      cart_new[item] ||= attribute_hash
+      cart_new[item][:count] ? cart_new[item][:count] +=1 : cart_new[item][:count] = 1
     end
   end
-  consolidated_cart
+  cart_new
 end
 
 def apply_coupons(cart, coupons)
@@ -54,4 +54,5 @@ total = (total * 0.9) if total > 100
 
 end
 
-consolidate_cart
+consolidate_cart(cart_new)
+

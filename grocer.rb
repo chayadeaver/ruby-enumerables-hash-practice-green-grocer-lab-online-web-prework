@@ -55,4 +55,5 @@ total = (total * 0.9) if total > 100
 end
 
 consolidate_cart(cart_new)
+apply_coupons(new_cart, coupons)
 

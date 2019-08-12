@@ -51,8 +51,8 @@ def checkout(cart, coupons)
     total += (attribute_hash[:price] * attribute_hash[:count])
   end 
 total = (total * 0.9) if total > 100 
-cart_new = consolidate_cart(cart)
-apply_coupons(cart_new, coupons)
+consolidate_cart(cart)
+capply_coupons(cart_new, coupons)
 
 end
 
